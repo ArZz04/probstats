@@ -3,10 +3,10 @@ public class Main {
     public static void main(String[] nousan) {
         Main main = new Main();
         System.out.println("-----------------------------| SIMPLE |-----------------------------");
-        main.calculateSimpleLinearRegression(2345);
+        main.calculateSimpleLinearRegression(1519);
         System.out.println("----------------------------| QUADRATIC |----------------------------");
         System.out.println("--------------------------| IN MAINTENANCE |-------------------------");
-        //main.calculateQuadraticRegression(1600);
+        main.calculateQuadraticRegression(1600);
     }
 
     public void calculateSimpleLinearRegression(int newXLinear) {
@@ -39,7 +39,7 @@ public class Main {
         QuadraticLinearRegression quadraticRegression = new QuadraticLinearRegression();
         quadraticRegression.fit(xData, yData);
 
-        // Obtener los coeficient es de la regresión cuadrática
+        // Obtener los coeficientes de la regresión cuadrática
         double aQuadratic = quadraticRegression.getA();
         double bQuadratic = quadraticRegression.getB();
         double cQuadratic = quadraticRegression.getC();

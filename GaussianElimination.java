@@ -10,7 +10,7 @@ public class GaussianElimination {
                 }
             }
 
-            // Swap rows
+            // intercambiar lineas
             double[] temp = A[i];
             A[i] = A[maxRow];
             A[maxRow] = temp;
@@ -19,7 +19,7 @@ public class GaussianElimination {
             b[i] = b[maxRow];
             b[maxRow] = t;
 
-            // Make this column 0 below the diagonal
+            // hacer esta columna 0 debajo en diagonal
             for (int j = i + 1; j < n; j++) {
                 double alpha = A[j][i] / A[i][i];
                 b[j] -= alpha * b[i];
@@ -29,7 +29,7 @@ public class GaussianElimination {
             }
         }
 
-        // Back substitution
+        // regresar la sustitucion
         double[] x = new double[n];
         for (int i = n - 1; i >= 0; i--) {
             double sum = 0.0;
