@@ -1,11 +1,12 @@
 public class Main {
 
-    public static void main(String[] args) {
+    public static void main(String[] nousan) {
         Main main = new Main();
         System.out.println("-----------------------------| SIMPLE |-----------------------------");
         main.calculateSimpleLinearRegression(2345);
         System.out.println("----------------------------| QUADRATIC |----------------------------");
-        main.calculateQuadraticRegression(100);
+        System.out.println("--------------------------| IN MAINTENANCE |-------------------------");
+        //main.calculateQuadraticRegression(1600);
     }
 
     public void calculateSimpleLinearRegression(int newXLinear) {
