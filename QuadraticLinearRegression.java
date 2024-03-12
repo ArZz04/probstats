@@ -46,4 +46,26 @@ public class QuadraticLinearRegression {
     public double getC() {
         return c;
     }
+
+    public static void calculateQuadraticRegression(int newXQuadratic) {
+        DataSet ds = new DataSet();
+        int[] xData = ds.getX();
+        int[] yData = ds.getY();
+
+        // Calcular la regresión cuadrática
+        QuadraticLinearRegression quadraticRegression = new QuadraticLinearRegression();
+        quadraticRegression.fit(xData, yData);
+
+        // Obtener los coeficientes de la regresión cuadrática
+        double aQuadratic = quadraticRegression.getA();
+        double bQuadratic = quadraticRegression.getB();
+        double cQuadratic = quadraticRegression.getC();
+
+        // Imprimir la ecuación de regresión cuadrática
+        System.out.println("Ecuación de regresión cuadrática: Y = " + aQuadratic + " * X^2 + " + bQuadratic + " * X + " + cQuadratic);
+
+        // Predecir el valor de Y para un nuevo valor de X usando regresión cuadrática
+        double predictedYQuadratic = quadraticRegression.predict(newXQuadratic);
+        System.out.println("Predicción cuadrática para X = " + newXQuadratic + ": Y = " + predictedYQuadratic);
+    }
 }
