@@ -22,7 +22,7 @@ public class QuadraticLinearRegression {
 
         double[] results = {sumY, sumXY, sumXSquareY};
 
-        GaussianElimination solver = new GaussianElimination();
+        Cleaner solver = new Cleaner();
         double[] coefficients = solver.solve(equations, results);
 
         // Assigning coefficients

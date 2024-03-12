@@ -1,4 +1,4 @@
-public class GaussianElimination {
+public class Cleaner {
     public double[] solve(double[][] A, double[] b) {
         int n = b.length;
 
